@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+label {
+    margin-bottom: 5px;
+}
+input {
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 150px; /* Set a smaller width for the input boxes */
+}
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
