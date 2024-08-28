@@ -11,23 +11,57 @@ const character = "kukuBird";
 document.addEventListener("DOMContentLoaded", async function(){
 
   const charStatus = await getChar();
-  console.log(charStatus.data.x,charStatus.data.y);
+  let moveX = parseInt(charStatus.data.x);
+  let moveY = parseInt(charStatus.data.y);
+  // sconsole.log(moveX,moveY);
+  document.querySelector("#upButton").addEventListener("click", function(){
 
-  document.getElementById("myForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    moveX = moveX;
+    moveY = moveY-1;
+    console.log(moveX, moveY);
+    movement(moveX,moveY);
+  })
+  
+  document.querySelector("#downButton").addEventListener("click", function(){
 
-    // Get the values of the input fields
-    const x = document.getElementById("variable1").value;
-    const y = document.getElementById("variable2").value;
+    moveX = moveX;
+    moveY = moveY+1;
+    console.log(moveX, moveY);
+    movement(moveX,moveY);
+  })
 
-    // You can process the variables here
-    console.log("X:", x);
-    console.log("Y:", y);
-    movement(x,y);
+  document.querySelector("#leftButton").addEventListener("click", function(){
 
-    // Optionally, you can clear the form
-    this.reset();
-});
+    moveX = moveX-1;
+    moveY = moveY;
+    console.log(moveX, moveY);
+    movement(moveX,moveY);
+  })
+
+  document.querySelector("#rightButton").addEventListener("click", function(){
+
+    moveX = moveX+1;
+    moveY = moveY;
+    console.log(moveX, moveY);
+    movement(moveX,moveY);
+  })
+
+
+//   document.getElementById("myForm").addEventListener("submit", function(event) {
+//     event.preventDefault(); // Prevent the default form submission
+
+//     // Get the values of the input fields
+//     const x = document.getElementById("variable1").value;
+//     const y = document.getElementById("variable2").value;
+
+//     // You can process the variables here
+//     console.log("X:", x);
+//     console.log("Y:", y);
+//     movement(x,y);
+
+//     // Optionally, you can clear the form
+//     this.reset();
+// });
 
   
 
