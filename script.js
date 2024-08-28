@@ -10,6 +10,8 @@ const character = "kukuBird";
 
 document.addEventListener("DOMContentLoaded", async function(){
 
+  const charStatus = await getChar();
+  console.log(charStatus.data.x,charStatus.data.y);
 
   document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the default form submission
@@ -30,6 +32,24 @@ document.addEventListener("DOMContentLoaded", async function(){
   
 
 })
+
+async function getChar(data){
+
+  const options = {
+    method: 'GET',
+    url: `https://api.artifactsmmo.com/characters/${character}`,
+    headers: {Accept: 'application/json'}
+  };
+  
+  try {
+    const { data } = await axios.request(options);
+    console.log(data);
+    return data;
+    
+  } catch (error) {
+    console.error(error);
+  }
+}
   
 async function movement(movex,movey){
 
