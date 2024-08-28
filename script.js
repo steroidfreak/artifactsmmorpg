@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", async function(){
   const charStatus = await getChar();
   let moveX = parseInt(charStatus.data.x);
   let moveY = parseInt(charStatus.data.y);
+  let infoBox = document.querySelector("#info");
+  infoBox.innerHTML = "";
+  
   // sconsole.log(moveX,moveY);
   document.querySelector("#upButton").addEventListener("click", function(){
 
@@ -20,6 +23,8 @@ document.addEventListener("DOMContentLoaded", async function(){
     moveY = moveY-1;
     console.log(moveX, moveY);
     movement(moveX,moveY);
+    infoBox.innerHTML=`<p>x: ${moveX},y: ${moveY}</p>`;
+    
   })
   
   document.querySelector("#downButton").addEventListener("click", function(){
@@ -28,6 +33,8 @@ document.addEventListener("DOMContentLoaded", async function(){
     moveY = moveY+1;
     console.log(moveX, moveY);
     movement(moveX,moveY);
+    infoBox.innerHTML=`<p>x: ${moveX},y: ${moveY}</p>`;
+
   })
 
   document.querySelector("#leftButton").addEventListener("click", function(){
@@ -36,6 +43,10 @@ document.addEventListener("DOMContentLoaded", async function(){
     moveY = moveY;
     console.log(moveX, moveY);
     movement(moveX,moveY);
+    infoBox.innerHTML = "";
+
+    infoBox.innerHTML=`<p>x: ${moveX},y: ${moveY}</p>`;
+
   })
 
   document.querySelector("#rightButton").addEventListener("click", function(){
@@ -44,6 +55,8 @@ document.addEventListener("DOMContentLoaded", async function(){
     moveY = moveY;
     console.log(moveX, moveY);
     movement(moveX,moveY);
+    infoBox.innerHTML=`<p>x: ${moveX},y: ${moveY}</p>`;
+
   })
 
 
