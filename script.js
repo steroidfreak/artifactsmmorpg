@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async function(){
   infoBox.innerHTML = "";
   
   // sconsole.log(moveX,moveY);
-  document.querySelector("#upButton").addEventListener("click", function(){
+  document.querySelector("#upButton").addEventListener("touchstart", function(){
 
     moveX = moveX;
     moveY = moveY-1;
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async function(){
     
   })
   
-  document.querySelector("#downButton").addEventListener("click", function(){
+  document.querySelector("#downButton").addEventListener("touchstart", function(){
 
     moveX = moveX;
     moveY = moveY+1;
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async function(){
 
   })
 
-  document.querySelector("#leftButton").addEventListener("click", function(){
+  document.querySelector("#leftButton").addEventListener("touchstart", function(){
 
     moveX = moveX-1;
     moveY = moveY;
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async function(){
 
   })
 
-  document.querySelector("#rightButton").addEventListener("click", function(){
+  document.querySelector("#rightButton").addEventListener("touchstart", function(){
 
     moveX = moveX+1;
     moveY = moveY;
