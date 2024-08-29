@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtifactsMMO Controller</title>
+    <title>ArtifactsMMO</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="snes-controller">
-        <div class="d-pad">
-            <button id="upButton" class="d-pad-button up">↑</button>
-            <button id="leftButton" class="d-pad-button left">←</button>
-            <button id="rightButton" class="d-pad-button right">→</button>
-            <button id="downButton" class="d-pad-button down">↓</button>
+    <div id="controller">
+        <div class="dpad">
+            <button id="upButton">↑</button>
+            <div>
+                <button id="leftButton">←</button>
+                <button id="rightButton">→</button>
+            </div>
+            <button id="downButton">↓</button>
         </div>
-        <div class="center-buttons">
-            <button class="center-button select">SELECT</button>
-            <button class="center-button start">START</button>
-        </div>
+        <div id="info"></div>
         <div class="action-buttons">
-            <button class="action-button button-y">Y</button>
-            <button class="action-button button-x">X</button>
-            <button class="action-button button-b">B</button>
-            <button class="action-button button-a">A</button>
-        </div>
-        <div class="shoulder-buttons">
-            <button class="shoulder-button shoulder-l">L</button>
-            <button class="shoulder-button shoulder-r">R</button>
+            <button>A</button>
+            <button>B</button>
         </div>
     </div>
-    <div id="info"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.5/axios.js"></script>
+    <!-- <div>
+        
+        <form id="myForm">
+            <label for="variable1">Enter X:</label>
+            <input type="text" id="variable1" name="variable1" required>
+    
+            <label for="variable2">Enter Y:</label>
+            <input type="text" id="variable2" name="variable2" required>
+    
+            <button type="submit">Submit</button>
+        </form>
+                  
+    </div> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.5/axios.js" integrity="sha512-XOPlIlXpw0vpE0/VuN7EuYgr5RwYVWelPtVSIVXVnPrui7nG70Y/OLwcvh2UxkxprQem8iKYQuMKfw4qxZAung==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 </html>
