@@ -1,53 +1,119 @@
 body {
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    min-height: 100vh;
     background-color: #f0f0f0;
 }
 
-#controller {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.snes-controller {
+    width: 90vw;
+    max-width: 430px; /* Approximate width of iPhone Pro Max */
+    aspect-ratio: 2 / 1;
+    background-color: #CECECE;
+    border-radius: 5vw;
+    position: relative;
+    padding: 5vw;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.dpad {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.d-pad {
+    position: absolute;
+    left: 12%;
+    top: 25%;
+    width: 25%;
+    aspect-ratio: 1 / 1;
 }
 
-.dpad button {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    border: 2px solid #333;
-    background-color: #fff;
-    border-radius: 10px;
+.d-pad-button {
+    position: absolute;
+    width: 33%;
+    height: 33%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 16px;
 }
 
-#info {
-    width: 200px;
-    height: 50px;
-    border: 2px solid #333;
-    background-color: #fff;
-    margin-bottom: 20px;
-    text-align: center;
-    line-height: 50px;
-}
+.up { top: 0; left: 33%; }
+.left { top: 33%; left: 0; }
+.right { top: 33%; right: 0; }
+.down { bottom: 0; left: 33%; }
 
 .action-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100px;
+    position: absolute;
+    right: 12%;
+    top: 25%;
+    width: 25%;
+    aspect-ratio: 1 / 1;
 }
 
-.action-buttons button {
-    width: 45px;
-    height: 45px;
-    border: 2px solid #333;
-    background-color: #fff;
-    border-radius: 10px;
+.action-button {
+    position: absolute;
+    width: 45%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button-y { top: 0; left: 0; background-color: #9E3FF7; }
+.button-x { top: 0; right: 0; background-color: #3FD147; }
+.button-b { bottom: 0; right: 0; background-color: #F73F3F; }
+.button-a { bottom: 0; left: 0; background-color: #F7D83F; }
+
+.center-buttons {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.center-button {
+    width: 45%;
+    height: 10%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 2.5vw;
+    font-size: 12px;
+}
+
+.shoulder-buttons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.shoulder-button {
+    width: 20%;
+    height: 10%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 5%;
+    font-size: 14px;
+}
+
+.shoulder-l { left: 5%; }
+.shoulder-r { right: 5%; }
+
+#info {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 430px) {
+    .snes-controller {
+        width: 95vw;
+    }
 }
